@@ -1,122 +1,70 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useState } from 'react';
+import { Shield, FileText, Database, Code, Terminal } from 'lucide-react';
+import Resumen from './components.jsx/Resumen';
+import InyeccionSQL from './components.jsx/InyeccionSQL';
+import XSS from './components.jsx/XSS';
+import Comandos from './components.jsx/Comandos';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tab, setTab] = useState('resumen');
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
+      <header className="bg-slate-900 text-white py-8 px-6 shadow-md">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-3">
+            <Shield size={36} className="text-red-400 animate-pulse" />
+            <div>
+              <h1 className="text-2xl font-bold tracking-tight">Auditoría de Seguridad Web</h1>
+              <p className="text-slate-400 text-xs">Municipalidad de Cerro Verde | Caso DVWA Low</p>
+            </div>
+          </div>
+          <div className="text-right text-xs text-slate-300">
+            <p><strong>Estudiante:</strong> Camilo Reyes</p>
+            <p><strong>Docente:</strong> Rubén Schnettler | Otoño 2026</p>
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      </header>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      {/* Menú de Navegación del Informe */}
+      <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div className="max-w-5xl mx-auto flex flex-wrap gap-1 px-4 py-2">
+          <button 
+            onClick={() => setTab('resumen')} 
+            className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${tab === 'resumen' ? 'bg-slate-100 text-slate-900 font-semibold' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'}`}>
+            <FileText size={16} /> Resumen
+          </button>
+          <button 
+            onClick={() => setTab('sqli')} 
+            className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${tab === 'sqli' ? 'bg-red-50 text-red-700 font-semibold' : 'text-slate-600 hover:text-red-600 hover:bg-red-50'}`}>
+            <Database size={16} /> Inyección SQL
+          </button>
+          <button 
+            onClick={() => setTab('xss')} 
+            className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${tab === 'xss' ? 'bg-amber-50 text-amber-700 font-semibold' : 'text-slate-600 hover:text-amber-600 hover:bg-amber-50'}`}>
+            <Code size={16} /> XSS Reflejado
+          </button>
+          <button 
+            onClick={() => setTab('comandos')} 
+            className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${tab === 'comandos' ? 'bg-purple-50 text-purple-700 font-semibold' : 'text-slate-600 hover:text-purple-600 hover:bg-purple-50'}`}>
+            <Terminal size={16} /> Inyección de Comandos
+          </button>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </nav>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Contenedor Principal Dinámico */}
+      <main className="flex-1 max-w-5xl w-full mx-auto px-4 py-8">
+        {tab === 'resumen' && <Resumen />}
+        {tab === 'sqli' && <InyeccionSQL />}
+        {tab === 'xss' && <XSS />}
+        {tab === 'comandos' && <Comandos />}
+      </main>
+
+      <footer className="bg-slate-100 border-t border-slate-200 text-slate-500 text-xs py-4 px-6 text-center">
+        INACAP Valparaíso • Departamento de Informática • T13034 Fundamentos de Seguridad
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;

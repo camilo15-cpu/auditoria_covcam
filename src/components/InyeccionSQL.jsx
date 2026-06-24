@@ -49,8 +49,9 @@ export default function InyeccionSQL() {
           display: 'flex',
           justifyContent: 'center'
         }}>
+          {/* Ruta corregida apuntando a /img/ */}
           <img 
-            src="/images/sql_injection.png" // Asegúrate de que apunte a tu ruta de imagen o déjala como la tenías levantada
+            src="/img/sqli_covcam.png" 
             alt="Evidencia SQL Injection en DVWA" 
             style={{ 
               maxWidth: '100%', 

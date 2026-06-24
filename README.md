@@ -3,7 +3,7 @@
 ### 🏫 Institución: INACAP
 **Asignatura:** Calidad y Aseguramiento de la Calidad de Software  
 **Caso de Estudio:** Portal de Trámites - Ilustre Municipalidad de Cerro Verde  
-**Estudiante:** Camilo Reyes  
+**Estudiante:** Camilo Covarrubias 
 
 ---
 

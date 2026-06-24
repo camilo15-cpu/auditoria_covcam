@@ -9,8 +9,8 @@
 
 ## 🚀 Accesos Directos del Proyecto
 
-* **🌐 Aplicación en Vivo (Vercel):** [Visitar Sitio Desplegado](AQUÍ_PEGA_TU_ENLACE_DE_VERCEL)
-* **💻 Código Fuente (GitHub):** [Ver Repositorio](AQUÍ_PEGA_TU_ENLACE_DE_GITHUB)
+* **🌐 Aplicación en Vivo (Vercel):** [Visitar Sitio Desplegado](https://auditoria-covcam.vercel.app )
+* **💻 Código Fuente (GitHub):** [Ver Repositorio](https://github.com/camilo15-cpu/auditoria_covcam)
 
 ---
 

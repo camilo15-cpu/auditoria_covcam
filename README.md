@@ -1,16 +1,31 @@
-# React + Vite
+# 📑 Proyecto de Auditoría y Gobernanza de Ciberseguridad
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🏫 Institución: INACAP
+**Asignatura:** Calidad y Aseguramiento de la Calidad de Software  
+**Caso de Estudio:** Portal de Trámites - Ilustre Municipalidad de Cerro Verde  
+**Estudiante:** Camilo Reyes  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Accesos Directos del Proyecto
 
-## React Compiler
+* **🌐 Aplicación en Vivo (Vercel):** [Visitar Sitio Desplegado](AQUÍ_PEGA_TU_ENLACE_DE_VERCEL)
+* **💻 Código Fuente (GitHub):** [Ver Repositorio](AQUÍ_PEGA_TU_ENLACE_DE_GITHUB)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📄 Resumen de los Informes Entregados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este repositorio contiene la implementación interactiva de los dos grandes bloques de la evaluación:
+
+1. **Informe A (Análisis Técnico):** Documentación visual y análisis de vulnerabilidades explotadas en laboratorio (Inyección SQL, XSS Reflejado, Inyección de Comandos).
+2. **Informe B (Gobernanza de Seguridad):** Planificación estratégica que incluye la Identificación de Activos, Matriz de Riesgos ponderada, Implementación de Controles Técnicos y el Plan de Continuidad de Negocio (RTO/RPO).
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+* **Frontend:** React.js
+* **Empaquetador:** Vite
+* **Despliegue:** Vercel Cloud Platform
+* **Control de Versiones:** Git & GitHub
